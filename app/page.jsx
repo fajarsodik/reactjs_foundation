@@ -1,10 +1,10 @@
-const app = document.getElementById("app");
+import { useState } from 'react';
 
 function Header({ title }) {
   return <h1>{title ? title : "default title"}</h1>;
 }
 
-function HomePage() {
+export default function HomePage() {
   const names = ["fajar", "sodik", "mochamad"];
   function handleClick() {
     setLikes(likes + 1);
@@ -24,6 +24,3 @@ function HomePage() {
     </div>
   );
 }
-
-const root = ReactDOM.createRoot(app);
-root.render(<HomePage />);
